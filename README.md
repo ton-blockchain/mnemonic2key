@@ -4,7 +4,13 @@ Simple CLI utility to convert TON mnemonic words to private key
 
 # Install
 
-`npm install`
+```
+git clone https://github.com/ton-blockchain/mnemonic2key.git
+
+cd mnemonic2key
+
+npm install
+```
 
 # Usage
 
