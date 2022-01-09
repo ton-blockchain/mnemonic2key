@@ -1,0 +1,10 @@
+{
+  "name": "mnemonic2key",
+  "version": "1.0.0",
+  "description": "Simple CLI utility to convert TON mnemonic words to private key",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "tonweb": "0.0.25",
+    "tonweb-mnemonic": "1.0.0"
+  }
+}
