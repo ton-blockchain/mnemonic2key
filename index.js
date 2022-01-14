@@ -29,11 +29,11 @@ const init = async () => {
 
         if (addressString) {
             const address = new TonWeb.utils.Address(addressString);
-            const addressBytes = new Uint8Array(4 + 32);
-            for (let i = 0; i < 4; i++) {
+            const addressBytes = new Uint8Array( 32 + 4);
+            addressBytes.set(address.hashPart, 0);
+            for (let i = 32; i < 32 + 4; i++) {
                 addressBytes[i] = address.wc === -1 ? 0xff : 0x00;
             }
-            addressBytes.set(address.hashPart, 4);
             fs.writeFileSync('wallet.addr', addressBytes);
         }
     }
